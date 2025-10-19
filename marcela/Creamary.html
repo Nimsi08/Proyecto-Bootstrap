@@ -243,6 +243,61 @@
   </div>
 </div>
 
+    <!-- MODAL REGISTRO -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background:#fff0f6;">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" style="color:#ff3399;">🧁 Registro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="registerForm">
+            <div class="mb-3">
+              <label>Usuario:</label>
+              <input type="text" id="regUser" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label>Contraseña:</label>
+              <input type="password" id="regPass" class="form-control" required>
+            </div>
+            <p id="regAlert" class="text-danger text-center fw-bold"></p>
+            <div class="text-center">
+              <button class="btn text-white fw-bold" style="background:#ff66b2;">Registrarse</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL LOGIN -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background:#fff0f6;">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" style="color:#ff3399;">🍰 Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label>Usuario:</label>
+              <input type="text" id="loginUser" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label>Contraseña:</label>
+              <input type="password" id="loginPass" class="form-control" required>
+            </div>
+            <p id="loginAlert" class="text-danger text-center fw-bold"></p>
+            <div class="text-center">
+              <button class="btn text-white fw-bold" style="background:#ff66b2;">Ingresar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!-- FOOTER -->
 <footer class="mt-5">
@@ -304,4 +359,5 @@
 </script>
 </body>
 </html>
+
 
