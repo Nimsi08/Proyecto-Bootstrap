@@ -211,52 +211,56 @@ font-size: 24px;
 
 <!-- BOOTSTRAP JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+    // ----- REGISTRO E INICIO DE SESIÓN -----
+    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+    const regAlert = document.getElementById('regAlert');
+    const loginAlert = document.getElementById('loginAlert');
+    const welcomeText = document.getElementById('welcomeText');
 
-<!-- FUNCIONALIDAD JS -->
-<script>
-  const registerForm = document.getElementById('registerForm');
-  const loginForm = document.getElementById('loginForm');
-  const regAlert = document.getElementById('regAlert');
-  const loginAlert = document.getElementById('loginAlert');
-  const welcomeText = document.getElementById('welcomeText');
+    if (registerForm) {
+      registerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('regUser').value;
+        const password = document.getElementById('regPass').value;
 
-  registerForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const username = document.getElementById('regUser').value;
-    const password = document.getElementById('regPass').value;
+        if (localStorage.getItem(username)) {
+          regAlert.textContent = '¡Este usuario ya existe!';
+        } else {
+          localStorage.setItem(username, password);
+          regAlert.textContent = '';
+          alert('¡Registro exitoso! Ahora puedes iniciar sesión 🍦');
+          const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+          modal.hide();
+          registerForm.reset();
+        }
+      });
+    }
 
-    if (localStorage.getItem(username)) {
-      regAlert.textContent = '¡Este usuario ya existe!';
-    } else {
-      localStorage.setItem(username, password);
-      regAlert.textContent = '';
-      alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
-      const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
-      modal.hide();
-      registerForm.reset();
-    }
-  });
+    if (loginForm) {
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('loginUser').value;
+        const password = document.getElementById('loginPass').value;
 
-  loginForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const username = document.getElementById('loginUser').value;
-    const password = document.getElementById('loginPass').value;
-
-    const savedPass = localStorage.getItem(username);
-    if (savedPass && savedPass === password) {
-      loginAlert.textContent = '';
-      welcomeText.textContent = `Bienvenido, ${username}!`;
-      const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-      modal.hide();
-      loginForm.reset();
-    } else {
-      loginAlert.textContent = 'Usuario o contraseña incorrectos.';
-    }
-  });
+        const savedPass = localStorage.getItem(username);
+        if (savedPass && savedPass === password) {
+          loginAlert.textContent = '';
+          welcomeText.textContent = `Bienvenido, ${username}! 🍰`;
+          const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+          modal.hide();
+          loginForm.reset();
+        } else {
+          loginAlert.textContent = 'Usuario o contraseña incorrectos.';
+        }
+      });
+    }
 </script>
 </body>
 
 </html>
+
 
 
 
