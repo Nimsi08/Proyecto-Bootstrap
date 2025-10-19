@@ -1,209 +1,329 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="UTF-8">
- <title>Creamary</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Bootstrap & Icons -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
- <style>
- body {
- background: #fff0f5;
-}
- .navbar {
- background-color: #ff66b2;
-}
-.navbar-brand, .nav-link {
-color: white !important;
- }
- footer {
- background-color: #ff66b2;
- color: white;
-padding: 20px 0;
-}
-.social-icons a {
- color: white;
- margin: 0 10px;
-font-size: 24px;
-}
- </style>
+  <meta charset="UTF-8">
+  <title>Creamary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #fff0f5;
+    }
+    .navbar {
+      background-color: #ff66b2;
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+    footer {
+      background-color: #ff66b2;
+      color: white;
+      padding: 20px 0;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 24px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR CON ESTILO Y BOTONES DE SESIÓN -->
-<nav class="navbar navbar-expand-lg shadow-sm" style="background: linear-gradient(to right, #ff66b2, #ff99cc);">
-  <div class="container">
-    <a class="navbar-brand text-white fw-bold" href="#">🍦 Creamary</a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg shadow-sm" style="background: linear-gradient(to right, #ff66b2, #ff99cc);">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">🍦 Creamary</a>
 
-    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <!-- Menú principal -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Fresas con crema</a></li>
-        <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Helados</a></li>
-        <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Postres</a></li>
-        <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Misión, visión</a></li>
-      </ul>
-
-      <!-- Botones de sesión -->
-      <div class="d-flex">
-        <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
-          <i class="bi bi-box-arrow-in-right me-1"></i> Iniciar Sesión
-        </button>
-        <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#registerModal">
-          <i class="bi bi-person-plus me-1"></i> Registrarse
-        </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Fresas con crema</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Helados</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Postres</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold px-3" href="#">Misión, visión</a></li>
+        </ul>
+        <button class="btn btn-light btn-sm me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</button>
+        <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#registerModal">Registrarse</button>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- SECCIÓN MISIÓN, VISIÓN Y VALORES -->
-<section class="py-5" style="background: #fffafc;">
-  <div class="container">
+  <!-- SECCIÓN MISIÓN, VISIÓN Y VALORES -->
+  <section class="py-5" style="background: #fffafc;">
+    <div class="container">
 
-    <!-- Encabezado de sección -->
-    <h2 class="text-center fw-bold mb-2" style="color:#ff66b2;">
-      Nuestra Misión y Visión 🍦
-    </h2>
-    <p class="text-center text-muted mb-5">
-      Comprometidos con el sabor, la calidad y la felicidad en cada postre.
-    </p>
+      <h2 class="text-center fw-bold mb-2" style="color:#ff66b2;">
+        Nuestra Misión y Visión 🍦
+      </h2>
+      <p class="text-center text-muted mb-5">
+        Comprometidos con el sabor, la calidad y la felicidad en cada postre.
+      </p>
 
-    <!-- Misión y Visión -->
-    <div class="row g-4">
-      <!-- Misión -->
-      <div class="col-md-6">
-        <div class="p-4 rounded shadow-sm h-100" style="background:#ffe6f0;">
-          <h4 class="fw-bold mb-3" style="color:#ff3399;">🌟 Misión</h4>
-          <p>
-            En <strong>Creamary</strong> buscamos crear los postres y sorbetes más deliciosos,
-            elaborados con ingredientes frescos y de alta calidad. 
-            Nuestra misión es endulzar la vida de cada cliente,
-            generando momentos únicos de felicidad y unión.
-          </p>
-          <blockquote class="fst-italic text-muted mt-3">
-            “Un postre dulce significa un momento feliz.”
-          </blockquote>
-        </div>
-      </div>
-
-      <!-- Visión -->
-      <div class="col-md-6">
-        <div class="p-4 rounded shadow-sm h-100" style="background:#ffe6f0;">
-          <h4 class="fw-bold mb-3" style="color:#ff3399;">✨ Visión</h4>
-          <p>
-            Ser reconocidos como la <strong>marca favorita de postres</strong> 
-            en la región, destacando por nuestra creatividad, 
-            innovación y compromiso con brindar experiencias 
-            inolvidables a cada persona que disfruta de Creamary.
-          </p>
-          <blockquote class="fst-italic text-muted mt-3">
-            “Soñamos con un mundo donde cada sonrisa tenga el sabor de Creamary.”
-          </blockquote>
-        </div>
-      </div>
-    </div>
-
-    <!-- Valores -->
-    <div class="mt-5">
-      <h3 class="text-center fw-bold mb-4" style="color:#ff66b2;">Nuestros Valores 💖</h3>
       <div class="row g-4">
-        <div class="col-md-3 col-6">
-          <div class="p-3 rounded shadow-sm text-center" style="background:#ffe6f0;">
-            <h5 class="fw-bold" style="color:#ff3399;">🍓 Calidad</h5>
-            <p class="small text-muted">Siempre usamos ingredientes frescos y seleccionados.</p>
+        <!-- Misión -->
+        <div class="col-md-6">
+          <div class="p-4 rounded shadow-sm h-100" style="background:#ffe6f0;">
+            <h4 class="fw-bold mb-3" style="color:#ff3399;">🌟 Misión</h4>
+            <p>
+              En <strong>Creamary</strong> buscamos crear los postres y sorbetes más deliciosos,
+              elaborados con ingredientes frescos y de alta calidad. 
+              Nuestra misión es endulzar la vida de cada cliente,
+              generando momentos únicos de felicidad y unión.
+            </p>
+            <blockquote class="fst-italic text-muted mt-3">
+              “Un postre dulce significa un momento feliz.”
+            </blockquote>
           </div>
         </div>
-        <div class="col-md-3 col-6">
-          <div class="p-3 rounded shadow-sm text-center" style="background:#ffe6f0;">
-            <h5 class="fw-bold" style="color:#ff3399;">🍫 Creatividad</h5>
-            <p class="small text-muted">Innovamos con sabores y combinaciones únicas.</p>
+
+        <!-- Visión -->
+        <div class="col-md-6">
+          <div class="p-4 rounded shadow-sm h-100" style="background:#ffe6f0;">
+            <h4 class="fw-bold mb-3" style="color:#ff3399;">✨ Visión</h4>
+            <p>
+              Ser reconocidos como la <strong>marca favorita de postres</strong> 
+              en la región, destacando por nuestra creatividad, 
+              innovación y compromiso con brindar experiencias 
+              inolvidables a cada persona que disfruta de Creamary.
+            </p>
+            <blockquote class="fst-italic text-muted mt-3">
+              “Soñamos con un mundo donde cada sonrisa tenga el sabor de Creamary.”
+            </blockquote>
           </div>
         </div>
-        <div class="col-md-3 col-6">
-          <div class="p-3 rounded shadow-sm text-center" style="background:#ffe6f0;">
-            <h5 class="fw-bold" style="color:#ff3399;">🍯 Alegría</h5>
-            <p class="small text-muted">Cada postre es una excusa para sonreír y compartir.</p>
+      </div>
+
+      <!-- Valores -->
+      <div class="mt-5">
+        <h3 class="text-center fw-bold mb-4" style="color:#ff66b2;">Nuestros Valores 💖</h3>
+        <div class="row g-4">
+          <div class="col-md-3 col-6">
+            <div class="p-3 rounded shadow-sm text-center" style="background:#ffe6f0;">
+              <h5 class="fw-bold" style="color:#ff3399;">🍓 Calidad</h5>
+              <p class="small text-muted">Siempre usamos ingredientes frescos y seleccionados.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="p-3 rounded shadow-sm text-center" style="background:#ffe6f0;">
+              <h5 class="fw-bold" style="color:#ff3399;">🍫 Creatividad</h5>
+              <p class="small text-muted">Innovamos con sabores y combinaciones únicas.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="p-3 rounded shadow-sm text-center" style="background:#ffe6f0;">
+              <h5 class="fw-bold" style="color:#ff3399;">🍯 Alegría</h5>
+              <p class="small text-muted">Cada postre es una excusa para sonreír y compartir.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="p-3 rounded shadow-sm text-center" style="background:#ffe6f0;">
+              <h5 class="fw-bold" style="color:#ff3399;">🍬 Compromiso</h5>
+              <p class="small text-muted">Buscamos superar expectativas en cada detalle.</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-3 col-6">
-          <div class="p-3 rounded shadow-sm text-center" style="background:#ffe6f0;">
-            <h5 class="fw-bold" style="color:#ff3399;">🍬 Compromiso</h5>
-            <p class="small text-muted">Buscamos superar expectativas en cada detalle.</p>
-          </div>
+      </div>
+
+      <!-- BOTÓN PARA ABRIR EL FORMULARIO -->
+      <div class="text-center mt-5">
+        <button class="btn btn-lg text-white fw-bold" style="background:#ff66b2;" data-bs-toggle="modal" data-bs-target="#commentModal">
+          💬 Déjanos tu comentario
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL CON FORMULARIO -->
+  <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background:#fff0f6;">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" style="color:#ff3399;">💌 Envíanos tu comentario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="commentForm">
+            <div class="mb-3">
+              <label class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Comentario:</label>
+              <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <p id="formAlert" class="text-center fw-bold mt-2"></p>
+            <div class="text-center">
+              <button type="submit" class="btn text-white fw-bold" style="background:#ff66b2;">Enviar</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- FOOTER -->
-<footer class="mt-5">
-  <div class="container text-center">
-    <p>Síguenos en nuestras redes sociales</p>
-    <div class="social-icons">
-      <a href="#"><i class="bi bi-facebook"></i></a>
-      <a href="#"><i class="bi bi-instagram"></i></a>
-      <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+  <!-- MODAL REGISTRO -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background:#fff0f6;">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" style="color:#ff3399;">🧁 Registro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="registerForm">
+            <div class="mb-3">
+              <label>Usuario:</label>
+              <input type="text" id="regUser" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label>Contraseña:</label>
+              <input type="password" id="regPass" class="form-control" required>
+            </div>
+            <p id="regAlert" class="text-danger text-center fw-bold"></p>
+            <div class="text-center">
+              <button class="btn text-white fw-bold" style="background:#ff66b2;">Registrarse</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <p class="mt-3">© 2025 Creamary. Todos los derechos reservados.</p>
   </div>
-</footer>
 
-<!-- BOOTSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- MODAL LOGIN -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background:#fff0f6;">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" style="color:#ff3399;">🍰 Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label>Usuario:</label>
+              <input type="text" id="loginUser" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label>Contraseña:</label>
+              <input type="password" id="loginPass" class="form-control" required>
+            </div>
+            <p id="loginAlert" class="text-danger text-center fw-bold"></p>
+            <div class="text-center">
+              <button class="btn text-white fw-bold" style="background:#ff66b2;">Ingresar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!-- FUNCIONALIDAD JS -->
-<script>
-  const registerForm = document.getElementById('registerForm');
-  const loginForm = document.getElementById('loginForm');
-  const regAlert = document.getElementById('regAlert');
-  const loginAlert = document.getElementById('loginAlert');
-  const welcomeText = document.getElementById('welcomeText');
+  <!-- FOOTER -->
+  <footer class="mt-5">
+    <div class="container text-center">
+      <p id="welcomeText" class="fw-bold"></p>
+      <p>Síguenos en nuestras redes sociales</p>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+      </div>
+      <p class="mt-3">© 2025 Creamary. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-  registerForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const username = document.getElementById('regUser').value;
-    const password = document.getElementById('regPass').value;
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    if (localStorage.getItem(username)) {
-      regAlert.textContent = '¡Este usuario ya existe!';
-    } else {
-      localStorage.setItem(username, password);
-      regAlert.textContent = '';
-      alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
-      const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
-      modal.hide();
-      registerForm.reset();
+  <!-- FUNCIONALIDAD COMPLETA -->
+  <script>
+    // ----- REGISTRO E INICIO DE SESIÓN -----
+    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+    const regAlert = document.getElementById('regAlert');
+    const loginAlert = document.getElementById('loginAlert');
+    const welcomeText = document.getElementById('welcomeText');
+
+    if (registerForm) {
+      registerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('regUser').value;
+        const password = document.getElementById('regPass').value;
+
+        if (localStorage.getItem(username)) {
+          regAlert.textContent = '¡Este usuario ya existe!';
+        } else {
+          localStorage.setItem(username, password);
+          regAlert.textContent = '';
+          alert('¡Registro exitoso! Ahora puedes iniciar sesión 🍦');
+          const modal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+          modal.hide();
+          registerForm.reset();
+        }
+      });
     }
-  });
 
-  loginForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const username = document.getElementById('loginUser').value;
-    const password = document.getElementById('loginPass').value;
+    if (loginForm) {
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('loginUser').value;
+        const password = document.getElementById('loginPass').value;
 
-    const savedPass = localStorage.getItem(username);
-    if (savedPass && savedPass === password) {
-      loginAlert.textContent = '';
-      welcomeText.textContent = `Bienvenido, ${username}!`;
-      const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-      modal.hide();
-      loginForm.reset();
-    } else {
-      loginAlert.textContent = 'Usuario o contraseña incorrectos.';
+        const savedPass = localStorage.getItem(username);
+        if (savedPass && savedPass === password) {
+          loginAlert.textContent = '';
+          welcomeText.textContent = `Bienvenido, ${username}! 🍰`;
+          const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+          modal.hide();
+          loginForm.reset();
+        } else {
+          loginAlert.textContent = 'Usuario o contraseña incorrectos.';
+        }
+      });
     }
-  });
-</script>
+
+    // ----- FORMULARIO DE COMENTARIOS -----
+    const commentForm = document.getElementById("commentForm");
+    if (commentForm) {
+      commentForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const alertBox = document.getElementById("formAlert");
+
+        if (name === "" || email === "" || message === "") {
+          alertBox.textContent = "⚠️ Por favor, completa todos los campos correctamente.";
+          alertBox.style.color = "red";
+          return;
+        }
+
+        alertBox.textContent = "✅ ¡Gracias por tu comentario! Nos encanta leerte 💕";
+        alertBox.style.color = "green";
+
+        setTimeout(() => {
+          const modal = bootstrap.Modal.getInstance(document.getElementById("commentModal"));
+          modal.hide();
+          commentForm.reset();
+          alertBox.textContent = "";
+        }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>
-
-
-
